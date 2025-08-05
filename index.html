@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/heroicons@1.0.6/dist/heroicons.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+
+
+
+
+    <style>
+  @keyframes dotMove {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: "."; }
+  }
+
+  .animate-dot::after {
+    content: ".";
+    animation: dotMove 1s steps(1, end) infinite;
+  }
+
+   @keyframes shimmer-lines {
+    0%, 100% {
+      background-size: 100% 100%;
+      opacity: 0.2;
+    }
+    50% {
+      background-size: 200% 200%;
+      opacity: 0.4;
+    }
+  }
+
+
+  .card-ekstra {
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  
+</style>
+  </head>
+  <body class="bg-gray-100 overflow-x-hidden">
+   <header class="sticky top-0 z-50 bg-gray-400 py-4">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <div class="text-2xl font-semibold">
+      <h1>SMK Negeri 1 Jakarta</h1>
+    </div>
+
+    
+    <button id="menuToggle" class="sm:hidden text-black focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+   
+   <!-- Navbar Utama (Desktop) -->
+<nav id="menu" class="hidden sm:flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm sm:text-base text-black font-semibold sm:items-center">
+  <a href="#beranda" class="transition hover:scale-105 cursor-pointer">Beranda</a>
+  <a href="#tentang" class="transition hover:scale-105 cursor-pointer">Tentang Kami</a>
+  <a href="#jurusan" class="transition hover:scale-105 cursor-pointer">Jurusan</a>
+  <a href="#ekstrakurikuler" class="transition hover:scale-105 cursor-pointer">Ekstrakurikuler</a>
+  <a href="#prestasi" class="transition hover:scale-105 cursor-pointer">Prestasi</a>
+  <a href="#berita" class="transition hover:scale-105 cursor-pointer">Berita</a>
+  <a href="#kontak" class="transition hover:scale-105 cursor-pointer">Hubungi Kami</a>
+</nav>
+
+<!-- Navbar Mobile -->
+<div id="mobileMenu" class="sm:hidden hidden px-4 mt-3 space-y-2">
+  <a href="#beranda" class="block text-black font-semibold hover:underline">Beranda</a>
+  <a href="#tentang" class="block text-black font-semibold hover:underline">Tentang Kami</a>
+  <a href="#jurusan" class="transition hover:scale-105 cursor-pointer">Jurusan</a>
+  <a href="#ekstrakurikuler" class="block text-black font-semibold hover:underline">Ekstrakurikuler</a>
+  <a href="#prestasi" class="block text-black font-semibold hover:underline">Prestasi</a>
+  <a href="#berita" class="block text-black font-semibold hover:underline">Berita</a>
+  <a href="#kontak" class="block text-black font-semibold hover:underline">Hubungi Kami</a>
+</div>
+</header>
+<main class="bg-gradient-to-b from-gray-200 to-gray-300">
+  <!--slide image-->
+  <section class="w-full">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="assets/sekolah.jpg" alt="" class="w-screen h-115 object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/sekolah2.jpg" alt="" class="w-screen h-115 object-cover" />
+      </div>
+      <div class="swiper-slide">
+        <img src="assets/sekolah3.jpg" alt="" class="w-screen h-115 object-cover" />
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  
+<div class="flex flex-col sm:flex-row justify-between items-center bg-gray-400 text-black px-6 py-4 gap-4">
+  <!-- Jam -->
+  <div class="jam-digital text-sm sm:text-base flex items-center gap-2 text-black">
+  <i class="fa-solid fa-clock text-cyan-400"></i>
+  <span id="jamDigital">Loading jam...</span>
+</div>
+
+  <!-- Sosial Media -->
+  <div class="flex gap-4 text-xl">
+    <a href="#" class="text-white hover:text-cyan-400 transition"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="text-white hover:text-cyan-400 transition"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="text-white hover:text-cyan-400 transition"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="text-white hover:text-cyan-400 transition"><i class="fab fa-youtube"></i></a>
+  </div>
+</div>
+</section>
+
+
+<!--profil-->
+<section id="tentang" class="bg-gradient-to-b from-gray-300 to-gray-200  py-12 px-6 sm:px-10 lg:px-24">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Profil Sekolah</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      SMK negeri 1 jakarta  adalah lembaga pendidikan kejuruan yang berkomitmen mencetak lulusan berkualitas, siap kerja, dan unggul dalam bidang teknologi. 
+      Kami menyediakan fasilitas lengkap, kurikulum berbasis industri, serta tenaga pengajar profesional untuk menunjang proses belajar-mengajar.
+    </p>
+  </div>
+
+  <div class=" mt-10 flex flex-col lg:flex-row items-center gap-10">
+    <div class="w-full lg:w-1/2 rounded-xl shadow-md overflow-hidden border">
+    <img 
+      src="assets/profil.jpg" 
+      alt="Profil Sekolah" 
+      class="transition duration-300 ease-in-out hover:scale-110 w-full h-full object-cover"
+    />
+  </div>
+    <div class="text-gray-700 text-left">
+      <h3 class="text-2xl font-semibold text-gray-700 mb-2">Visi & Misi</h3>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Menjadi sekolah kejuruan unggulan berbasis teknologi dan karakter.</li>
+        <li>Mendidik siswa agar siap kerja, mandiri, dan berjiwa wirausaha.</li>
+        <li>Membangun kolaborasi dengan dunia industri dan dunia usaha.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--Keahlian jurusan-->
+<section id="jurusan" class="bg-gradient-to-r from-gray-300 to-gray-200 py-12 px-6 sm:px-10 lg:px-24">
+  <div class="max-w-5xl mx-auto text-center">
+    <h1 class="text-3xl font-bold hover:text-gray-700 text-gray-800 mb-4">Program Keahlian</h1>
+    <p class="text-gray-700 mb-8 translate-y-5">SMK Negeri 1 Jakarta memiliki berbagai jurusan unggulan yang siap mencetak lulusan profesional dan berdaya saing tinggi.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-6">
+      <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Teknik Komputer dan Jaringan</h3>
+        <p class="text-gray-600 text-sm">Menginstalasi Perangkat Jaringan : Internet Service Provider (ISP), Wireless Networking, Network Administrator, Administrasi Server, Linux Administrator, VOIP Integrator, Web Administrator.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Rekayasa Perangkat Lunak</h3>
+        <p class="text-gray-600 text-sm">Adalah satu bidang profesi yang mendalami cara-cara pengembangan perangkat lunak termasuk pembuatan, pemeliharaan, manajemen organisasi pengembanganan perangkat lunak dan manajemen kualitas.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Teknik Kendaraan Ringan</h3>
+        <p class="text-gray-600 text-sm">Mekanik otomotif motor bensin, solar, diesel, dan sepeda motor. Operator industri otomotif dan wirausaha bengkel otomotif dan sepeda motor.</p>
+      </div>
+    </div>
+
+    
+     <a href="isi-jurusan.html" class="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium px-4 py-1 rounded transition">
+      Selengkapnya
+      <span class="ml-2 animate-dot">.</span>
+    </a>
+  </div>
+</section>
+  </div>
+</section>
+
+
+
+<!--Ekstrakurikuler-->
+<section id="ekstrakurikuler" class="bg-gradient-to-b from-gray-100 to-gray-200 py-12 px-6 sm:px-10 lg:px-24">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Ekstrakurikuler</h2>
+    <p class="text-gray-700 text-lg mb-10">
+      SMK Negeri 1 Jakarta menyediakan berbagai kegiatan ekstrakurikuler untuk mengembangkan bakat dan minat siswa di luar kelas.
+    </p>
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition relative">
+  
+  <button
+    class=" absolute top-2 left-2 bg-cyan-600 text-white  text-xs font-semibold px-3 py-1 rounded hover:bg-cyan-700 transition">
+    <a href="isi-ekstrakulikuler.html"> Selengkapnya</a>
+     <span class="ml-2 animate-dot">.</span>
+  </button>
+
+    <div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Item 1 -->
+      <div class=" bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+       <div class="card-ekstra relative rounded-xl overflow-hidden w-full h-40">
+  <img src="assets/pramuka.jpg" alt="Pramuka"
+       class="w-full h-full object-cover rounded-md relative z-10">
+</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pramuka</h3>
+        <p class="text-gray-600 text-sm">Melatih kedisiplinan, kepemimpinan, dan jiwa sosial siswa melalui kegiatan lapangan.</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <img src="assets/pmr.jpg" alt="PMR" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Palang Merah Remaja</h3>
+        <p class="text-gray-600 text-sm">Membentuk siswa peduli kesehatan, kemanusiaan, dan siap tanggap bencana.</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <img src="assets/futsal.jpg" alt="Futsal" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Futsal</h3>
+        <p class="text-gray-600 text-sm">Mendorong siswa untuk aktif, sehat, dan menjunjung tinggi sportivitas.</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <img src="assets/itclub.jpg" alt="IT Club" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">IT Club</h3>
+        <p class="text-gray-600 text-sm">Tempat belajar coding, desain grafis, dan inovasi teknologi bagi siswa yang berminat di bidang IT.</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <img src="assets/paskibra.jpg" alt="Paskibra" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Paskibra</h3>
+        <p class="text-gray-600 text-sm">Menanamkan rasa nasionalisme dan kedisiplinan melalui latihan baris-berbaris.</p>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <img src="assets/musik.jpg" alt="Musik" class="w-full h-40 object-cover rounded-md mb-4">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Band / Musik</h3>
+        <p class="text-gray-600 text-sm">Menyalurkan minat dan bakat siswa dalam seni musik serta tampil di berbagai event sekolah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Prestasi-->
+<section id="prestasi" class="bg-gradient-to-b from-gray-200 to-gray-300 py-12 px-6 sm:px-10 lg:px-24">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Prestasi Siswa</h2>
+    <p class="text-gray-600 text-lg mb-10">
+      Prestasi siswa SMK Negeri 1 Jakarta mencerminkan semangat, kerja keras, dan dedikasi dalam berbagai bidang.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+   <!-- Prestasi 1 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-it.html">
+      <img src="assets/lomba-it.jpg" alt="Lomba IT" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      12 Mei 2024
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Juara 1 Lomba IT Nasional</h3>
+  <p class="text-gray-600 text-sm">Diraih oleh tim RPL dalam ajang kompetisi tingkat nasional tahun 2024.</p>
+</div>
+
+
+
+<!-- Prestasi 2 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-futsal.html">
+      <img src="assets/lomba-futsal.jpg" alt="Futsal" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      18 Maret 2024
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Juara 2 Turnamen Futsal Kota</h3>
+  <p class="text-gray-600 text-sm">Tim futsal SMK berhasil mengalahkan 15 tim lain dan lolos ke final.</p>
+</div>
+
+
+
+<!-- Prestasi 3 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-pramuka.html">
+      <img src="assets/lomba-pramuka.jpg" alt="Pramuka" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      9 November 2023
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Juara 3 Pramuka Se-Jawa Barat</h3>
+  <p class="text-gray-600 text-sm">Kegiatan lomba kepramukaan regional yang digelar oleh Kwarcab tahun 2023.</p>
+</div>
+
+
+
+<!-- Prestasi 4 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-desain.html">
+      <img src="assets/lomba-desain.jpg" alt="Desain" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      25 Juni 2024
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Juara Favorit Desain Grafis</h3>
+  <p class="text-gray-600 text-sm">Siswa jurusan DKV memenangkan voting terbanyak dalam lomba desain logo tingkat nasional.</p>
+</div>
+
+
+<!-- Prestasi 5 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-pmr.html">
+      <img src="assets/lomba-pmr.jpg" alt="PMR" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      5 April 2024
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Tim PMR Terbaik</h3>
+  <p class="text-gray-600 text-sm">Diberikan oleh PMI atas kontribusi aktif dalam kegiatan sosial dan kesehatan masyarakat.</p>
+</div>
+
+
+<!-- Prestasi 6 -->
+<div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+  <div class="relative">
+    <a href="prestasi/detail-lomba-band.html">
+      <img src="assets/lomba-band.jpg" alt="Band" class="w-full h-40 object-cover rounded-md mb-4">
+    </a>
+    <span class="absolute top-2 left-2 bg-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded shadow z-10">
+      28 Februari 2024
+    </span>
+  </div>
+  <h3 class="text-xl font-semibold text-gray-700 mb-1">Band Sekolah Juara Festival Musik</h3>
+  <p class="text-gray-600 text-sm">Memenangkan lomba band antar pelajar dalam festival musik pelajar Bogor Raya.</p>
+</div>
+
+</section>
+
+
+ <!-- Berita -->
+<section id="berita" class="bg-gradient-to-b from-gray-200 to-gray-300 py-12 px-6 sm:px-10 lg:px-24">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Berita Terbaru</h2>
+    <p class="text-gray-700 text-lg mb-10">Informasi dan kabar terbaru dari kegiatan SMK Negeri 1 Jakarta.</p>
+
+    
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md overflow-hidden">
+        <img src="assets/berita-kompetensi-lks.jpg" alt="Juara LKS" class="w-full h-48 object-cover">
+        <div class="p-5 text-left">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2"> SMK Negeri 1 Sukses Raih Juara LKS Tingkat Provinsi</h3>
+          <p class="text-gray-600 text-sm mb-3">Tim Teknik Otomotif berhasil meraih juara 1 di tingkat provinsi dan siap bersaing di tingkat nasional.</p>
+          <a href="isi-berita.html" class="text-sm text-gray-600 font-semibold hover:underline">Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md overflow-hidden">
+        <img src="assets/berita-magang-jepang.jpg" alt="Magang Jepang" class="w-full h-48 object-cover">
+        <div class="p-5 text-left">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2"> Program Magang ke Industri Jepang Resmi Dibuka</h3>
+          <p class="text-gray-600 text-sm mb-3">Program magang ke Jepang dibuka untuk siswa kelas XII jurusan teknik dan kesehatan bersama Mitra Global.</p>
+          <a href="isi-berita.html" class="text-sm text-gray-600 font-semibold hover:underline">Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-md overflow-hidden">
+        <img src="assets/berita-inovasi-penyaringan.jpg" alt="Penyaring Air" class="w-full h-48 object-cover">
+        <div class="p-5 text-left">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2"> Inovasi Siswa: Alat Penyaring Air Portabel</h3>
+          <p class="text-gray-600 text-sm mb-3">Dua siswa Teknik Kimia menciptakan alat penyaring air dari bahan sederhana untuk daerah rawan bencana.</p>
+          <a href="isi-berita.html" class="text-sm text-gray-600 font-semibold hover:underline">Selengkapnya →</a>
+        </div>
+      </div>
+
+        </div>
+
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hubungi Kami -->
+<section id="kontak" class="bg-black py-12 px-6 sm:rounded-2xl sm:m-6 sm:px-10 lg:px-24">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-white text-center mb-10">Hubungi Kami</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      
+      <div class="bg-gray-900 rounded-2xl shadow-lg p-8">
+        <h3 class="text-xl font-semibold text-white mb-4">Informasi Kontak</h3>
+        <p class="text-gray-300 mb-6">
+          Jika Anda memiliki pertanyaan seputar pendaftaran, program keahlian, atau ingin bekerja sama, silakan hubungi kami melalui informasi berikut.
+        </p>
+        <ul class="space-y-3 text-gray-200">
+          <li><strong>Alamat:</strong> Jl. Pendidikan No. 123, Jakarta, Jawa Barat</li>
+          <li><strong>Telepon:</strong> (0251) 123-456</li>
+          <li><strong>Email:</strong> info@smkn1jakarta.sch.id</li>
+          <li><strong>Jam Operasional:</strong> Senin - Jumat, 07.00 - 15.00 WIB</li>
+        </ul>
+      </div>
+
+      
+      <div class="bg-gray-900 rounded-2xl shadow-lg p-8">
+        <h3 class="text-xl font-semibold text-white mb-4">Kirim Pesan</h3>
+        <form class="space-y-4">
+          <div>
+            <label for="nama" class="block text-sm font-medium text-gray-300">Nama</label>
+            <input type="text" id="nama" name="nama" required
+              class="mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+            <input type="email" id="email" name="email" required
+              class="mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-cyan-500 focus:border-cyan-500">
+          </div>
+
+          <div>
+            <label for="pesan" class="block text-sm font-medium text-gray-300">Pesan</label>
+            <textarea id="pesan" name="pesan" rows="4" required
+              class="mt-1 block w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white rounded-lg focus:ring-cyan-500 focus:border-cyan-500"></textarea>
+          </div>
+
+          <button type="submit"
+            class="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold px-6 py-2 rounded-lg transition">
+            Kirim
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<!--footer-->
+<footer class="bg-black text-gray-50 mt-12 relative">
+  <div class="max-w-7xl mx-auto py-10 px-6 sm:px-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+    
+  
+    <div>
+      <h2 class="text-2xl font-bold mb-4">SMK Negeri 1 Jakarta</h2>
+      <p class="text-sm text-gray-200 mb-4">
+        Sekolah Menengah Kejuruan unggulan di Jakarta yang berfokus pada pendidikan vokasi dan pengembangan karakter siswa.
+      </p>
+      <img src="assets/logo.jpg" alt="Logo SMK Negeri 1 Bogor" class="h-16 w-auto mt-2" />
+    </div>
+
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="#beranda" class="hover:underline hover:text-yellow-400">Beranda</a></li>
+        <li><a href="#tentang" class="hover:underline hover:text-yellow-400">Tentang Kami</a></li>
+        <li><a href="#jurusan" class="hover:underline hover:text-yellow-400">Jurusan</a></li>
+        <li><a href="#ekstrakulikuler" class="hover:underline hover:text-yellow-400">Ekstrakurikuler</a></li>
+        <li><a href="#prestasi" class="hover:underline hover:text-yellow-400">Prestasi</a></li>
+        <li><a href="#berita" class="hover:underline hover:text-yellow-400">Berita</a></li>
+        <li><a href="#kontak" class="hover:underline hover:text-yellow-400">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+      <p class="text-sm text-gray-200 mb-2">Jl. Pendidikan No. 123, jakarta</p>
+      <p class="text-sm text-gray-200 mb-2">Email: info@smkn1jakarta.sch.id</p>
+      <p class="text-sm text-gray-200 mb-4">Telepon: (0251) 123-456</p>
+      <div class="flex gap-4 text-xl">
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="jam-digital absolute right-6 bottom-12 text-sm text-gray-300 flex items-center gap-2">
+    <i class="fa-solid fa-clock text-cyan-400"></i>
+    <span id="jamDigital">Memuat waktu...</span>
+  </div>
+
+ 
+  <div class="border-t border-cyan-700 text-center py-4 text-sm text-gray-300">
+    &copy; 2025 SMK Negeri 1 Jakarta. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+  <script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+    function updateClock() {
+  const now = new Date();
+  const jam = now.getHours().toString().padStart(2, "0");
+  const menit = now.getMinutes().toString().padStart(2, "0");
+  const detik = now.getSeconds().toString().padStart(2, "0");
+  const tanggal = now.toLocaleDateString("id-ID", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  const fullTime = `${tanggal}, ${jam}:${menit}:${detik}`;
+  
+  
+  document.querySelectorAll(".jam-digital").forEach(el => {
+    el.textContent = fullTime;
+  });
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+     
+</script>
+</html>

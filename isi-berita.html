@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isi Berita - SMK Negeri 1</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="sticky top-0 z-50 bg-gray-400 py-4">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <div class="text-2xl font-semibold">
+      <h1>SMK Negeri 1 Jakarta</h1>
+    </div>
+
+    
+    <button id="menuToggle" class="sm:hidden text-black focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+   
+   <!-- Navbar Utama (Desktop) -->
+<nav id="menu" class="hidden sm:flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm sm:text-base text-black font-semibold sm:items-center">
+  <a href="index.html#beranda" class="transition hover:scale-105 cursor-pointer">Beranda</a>
+  <a href="index.html#tentang" class="transition hover:scale-105 cursor-pointer">Tentang Kami</a>
+  <a href="index.html#jurusan" class="transition hover:scale-105 cursor-pointer">Jurusan</a>
+  <a href="index.html#ekstrakurikuler" class="transition hover:scale-105 cursor-pointer">Ekstrakurikuler</a>
+  <a href="index.html#prestasi" class="transition hover:scale-105 cursor-pointer">Prestasi</a>
+  <a href="index.html#berita" class="transition hover:scale-105 cursor-pointer">Berita</a>
+  <a href="index.html#kontak" class="transition hover:scale-105 cursor-pointer">Hubungi Kami</a>
+</nav>
+
+<!-- Navbar Mobile -->
+<div id="mobileMenu" class="sm:hidden hidden px-4 mt-3 space-y-2">
+  <a href="index.html#beranda" class="block text-black font-semibold hover:underline">Beranda</a>
+  <a href="index.html#tentang" class="block text-black font-semibold hover:underline">Tentang Kami</a>
+  <a href="index.html#jurusan" class="transition hover:scale-105 cursor-pointer">Jurusan</a>
+  <a href="index.html#ekstrakurikuler" class="block text-black font-semibold hover:underline">Ekstrakurikuler</a>
+  <a href="index.html#prestasi" class="block text-black font-semibold hover:underline">Prestasi</a>
+  <a href="index.html#berita" class="block text-black font-semibold hover:underline">Berita</a>
+  <a href="index.html#kontak" class="block text-black font-semibold hover:underline">Hubungi Kami</a>
+</div>
+</header>
+    <main class="p-6">
+      <section class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8 text-center">Berita Lengkap SMK Negeri 1</h1>
+
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Berita 1 -->
+         
+<div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative">
+    <img src="assets/berita-kompetensi-lks.jpg" alt="Juara LKS" class="w-full h-48 object-cover">
+
+    
+    <a href="berita/detail-berita-card1.html" class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> SMK Negeri 1 Sukses Raih Juara LKS Tingkat Provinsi</h2>
+    <p class="text-sm text-gray-600">
+      Tim Teknik Otomotif SMK Negeri 1 berhasil meraih juara 1 dalam Lomba Kompetensi Siswa (LKS) tingkat provinsi. Kemenangan ini mengantarkan mereka ke tingkat nasional.
+    </p>
+  </div>
+</div>
+
+
+
+          <!-- Berita 2 -->
+<div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-magang-jepang.jpg" alt="Magang Jepang"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+
+    
+    <a href="berita/detail-berita-card2.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> Program Magang ke Industri Jepang Resmi Dibuka</h2>
+    <p class="text-sm text-gray-600">
+      SMK Negeri 1 membuka program magang ke Jepang bekerja sama dengan Mitra Global Internasional. Siswa kelas XII dari jurusan teknik dan kesehatan diprioritaskan.
+    </p>
+  </div>
+</div>
+
+          <!-- Berita 3 -->
+          <div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-inovasi-penyaringan.jpg" alt="Alat Penyaring Air"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+    <a href="berita/detail-berita-card3.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> Inovasi Siswa SMK: Alat Penyaring Air Portabel</h2>
+    <p class="text-sm text-gray-600">
+      Dua siswa jurusan Teknik Kimia menciptakan alat penyaring air dari bahan sederhana yang bisa digunakan di daerah rawan bencana.
+    </p>
+  </div>
+</div>
+
+          <!-- Berita 4 -->
+          <div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-duta-digital.jpg" alt="Duta Digital"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+    <a href="berita/detail-berita-card4.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> Guru SMK Negeri 1 Terpilih Jadi Duta Digital Pendidikan</h2>
+    <p class="text-sm text-gray-600">
+      Ibu Anisa, guru produktif TKJ, ditunjuk sebagai Duta Digital oleh Kemdikbud karena kontribusinya dalam pengembangan konten e-learning.
+    </p>
+  </div>
+</div>
+
+          <!-- Berita 5 -->
+         <div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-pameran-dkv.jpg" alt="Pameran DKV"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+    <a href="berita/detail-berita-card5.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> Pameran Karya Siswa Jurusan DKV Sukses Menarik Perhatian Pengunjung</h2>
+    <p class="text-sm text-gray-600">
+      Karya desain grafis, animasi, dan video kreatif siswa jurusan DKV dipamerkan di Aula Utama sekolah. Pengunjung datang dari berbagai sekolah dan instansi.
+    </p>
+  </div>
+</div>
+
+          <!-- Berita 6 -->
+          <div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-smk-factory.jpg" alt="Teaching Factory"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+    <a href="berita/detail-berita-card6.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> SMK Siap Jadi Sekolah Berbasis Teaching Factory</h2>
+    <p class="text-sm text-gray-600">
+      SMK Negeri 1 menerapkan model pembelajaran Teaching Factory (Tefa) yang lebih dekat dengan dunia kerja nyata, dimulai dari jurusan RPL dan TKR.
+    </p>
+  </div>
+</div>
+
+          <!-- Berita 7 -->
+         
+<div class="bg-white rounded-xl shadow overflow-hidden group relative">
+  <div class="relative overflow-hidden">
+    <img src="assets/berita-alumni-smk-bumn.jpg" alt="Alumni BUMN"
+         class="w-full h-48 object-cover transition duration-300 ease-in-out filter">
+    
+
+    <a href="berita/detail-berita-card7.html"
+       class="absolute top-2 left-2 bg-white text-sm text-blue-600 px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition duration-300">
+      Baca Selengkapnya
+    </a>
+  </div>
+
+  <div class="p-4">
+    <h2 class="text-lg font-semibold mb-2"> Alumni SMK Berhasil Diterima di Perusahaan BUMN</h2>
+    <p class="text-sm text-gray-600">
+      Beberapa alumni angkatan 2024 diterima bekerja di perusahaan besar seperti Telkom, PLN, dan Astra.
+    </p>
+  </div>
+</div>
+
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer class="bg-black text-gray-50 mt-12 relative">
+  <div class="max-w-7xl mx-auto py-10 px-6 sm:px-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+    
+   
+    <div>
+      <h2 class="text-2xl font-bold mb-4">SMK Negeri 1 Jakarta</h2>
+      <p class="text-sm text-gray-200 mb-4">
+        Sekolah Menengah Kejuruan unggulan di Bogor yang berfokus pada pendidikan vokasi dan pengembangan karakter siswa.
+      </p>
+      <img src="assets/logo.jpg" alt="Logo SMK Negeri 1 Bogor" class="h-16 w-auto mt-2" />
+    </div>
+
+    
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Navigasi</h3>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="index.html#beranda" class="hover:underline hover:text-yellow-400">Beranda</a></li>
+        <li><a href="index.html#tentang" class="hover:underline hover:text-yellow-400">Tentang Kami</a></li>
+        <li><a href="index.html#jurusan" class="hover:underline hover:text-yellow-400">Jurusan</a></li>
+        <li><a href="index.html#ekstrakulikuler" class="hover:underline hover:text-yellow-400">Ekstrakurikuler</a></li>
+        <li><a href="index.html#prestasi" class="hover:underline hover:text-yellow-400">Prestasi</a></li>
+        <li><a href="index.html#berita" class="hover:underline hover:text-yellow-400">Berita</a></li>
+        <li><a href="index.html#kontak" class="hover:underline hover:text-yellow-400">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+   
+    <div>
+      <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+      <p class="text-sm text-gray-200 mb-2">Jl. Pendidikan No. 123, Bogor</p>
+      <p class="text-sm text-gray-200 mb-2">Email: info@smkn1bogor.sch.id</p>
+      <p class="text-sm text-gray-200 mb-4">Telepon: (0251) 123-456</p>
+      <div class="flex gap-4 text-xl">
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAM DIGITAL -->
+  <div class="jam-digital absolute right-6 bottom-12 text-sm text-gray-300 flex items-center gap-2">
+    <i class="fa-solid fa-clock text-cyan-400"></i>
+    <span id="jamDigital">Memuat waktu...</span>
+  </div>
+
+  <!-- Garis Bawah -->
+  <div class="border-t border-cyan-700 text-center py-4 text-sm text-gray-300">
+    &copy; 2025 SMK Negeri 1 Bogor. All rights reserved.
+  </div>
+</footer>
+<script>
+  function updateClock() {
+  const now = new Date();
+  const jam = now.getHours().toString().padStart(2, "0");
+  const menit = now.getMinutes().toString().padStart(2, "0");
+  const detik = now.getSeconds().toString().padStart(2, "0");
+  const tanggal = now.toLocaleDateString("id-ID", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  const fullTime = `${tanggal}, ${jam}:${menit}:${detik}`;
+  
+  // Update semua elemen dengan class "jam-digital"
+  document.querySelectorAll(".jam-digital").forEach(el => {
+    el.textContent = fullTime;
+  });
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+</html>

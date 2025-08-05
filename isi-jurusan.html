@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isi Jurusan - SMKN 1 Bogor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+  <style>
+    .slide-fade {
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .slide-active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+
+  <header class="bg-gray-400 sticky top-0 z-50 py-4 shadow">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-semibold">SMK Negeri 1 Jakarta</h1>
+
+      <!-- Toggle Button -->
+      <button id="menuToggle" class="sm:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Navbar Desktop -->
+      <nav class="hidden sm:flex gap-6 font-semibold" id="menu">
+        <a href="index.html#beranda" class="hover:scale-105">Beranda</a>
+        <a href="index.html#tentang" class="hover:scale-105">Tentang Kami</a>
+        <a href="index.html#jurusan" class="hover:scale-105">Jurusan</a>
+        <a href="index.html#ekstrakurikuler" class="hover:scale-105">Ekstrakurikuler</a>
+        <a href="index.html#prestasi" class="hover:scale-105">Prestasi</a>
+        <a href="index.html#berita" class="hover:scale-105">Berita</a>
+        <a href="index.html#kontak" class="hover:scale-105">Hubungi Kami</a>
+      </nav>
+    </div>
+
+    <!-- Navbar Mobile -->
+    <div id="mobileMenu" class="hidden sm:hidden px-4 mt-2 space-y-2 font-semibold">
+      <a href="#beranda" class="block">Beranda</a>
+      <a href="#tentang" class="block">Tentang Kami</a>
+      <a href="#jurusan" class="block">Jurusan</a>
+      <a href="#ekstrakurikuler" class="block">Ekstrakurikuler</a>
+      <a href="#prestasi" class="block">Prestasi</a>
+      <a href="#berita" class="block">Berita</a>
+      <a href="#kontak" class="block">Hubungi Kami</a>
+    </div>
+  </header>
+
+  
+  <main class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-md flex-grow">
+    <h2 class="text-3xl font-bold mb-6 text-center">Jurusan SMKN 1 Bogor</h2>
+
+    <div class="flex justify-between mb-4">
+      <button onclick="prevSlide()" class="bg-cyan-700 text-white px-4 py-2 rounded hover:bg-cyan-900">← Prev</button>
+      <button onclick="nextSlide()" class="bg-cyan-700 text-white px-4 py-2 rounded hover:bg-cyan-900">Next →</button>
+    </div>
+
+    
+    <div id="jurusanContainer" class="slide-active transition-all duration-300">
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white mt-12 pt-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
+      
+  
+      <div>
+        <h3 class="text-xl font-bold mb-4">SMK Negeri 1 Bogor</h3>
+        <p class="text-sm text-gray-300">
+          Sekolah Menengah Kejuruan unggulan di Bogor yang berfokus pada pendidikan vokasi dan pengembangan karakter siswa.
+        </p>
+        <img src="assets/logo.jpg" alt="Logo SMKN 1 Bogor" class="h-16 w-auto mt-4" />
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="index.html#beranda" class="hover:underline hover:text-yellow-400">Beranda</a></li>
+          <li><a href="index.html#tentang" class="hover:underline hover:text-yellow-400">Tentang Kami</a></li>
+          <li><a href="index.html#jurusan" class="hover:underline hover:text-yellow-400">Jurusan</a></li>
+          <li><a href="index.html#ekstrakurikuler" class="hover:underline hover:text-yellow-400">Ekstrakurikuler</a></li>
+          <li><a href="index.html#prestasi" class="hover:underline hover:text-yellow-400">Prestasi</a></li>
+          <li><a href="index.html#berita" class="hover:underline hover:text-yellow-400">Berita</a></li>
+          <li><a href="index.html#kontak" class="hover:underline hover:text-yellow-400">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+     
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+        <p class="text-sm text-gray-300">Jl. Pendidikan No. 123, Bogor</p>
+        <p class="text-sm text-gray-300">Email: info@smkn1bogor.sch.id</p>
+        <p class="text-sm text-gray-300 mb-4">Telepon: (0251) 123-456</p>
+        <div class="flex gap-4 text-xl">
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="border-t border-cyan-700 mt-8 px-6 py-4 flex justify-between items-center text-sm text-gray-300">
+      <span>&copy; 2025 SMK Negeri 1 Bogor. All rights reserved.</span>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-clock text-cyan-400"></i>
+        <span id="jamDigital">Memuat waktu...</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const jurusanData = [
+      { nama: "Rekayasa Perangkat Lunak", deskripsi: "adalah satu bidang profesi yang mendalami cara-cara pengembangan perangkat lunak termasuk pembuatan, pemeliharaan, manajemen organisasi pengembanganan perangkat lunak dan manajemen kualitas." },
+      { nama: "Desain Komunikasi Visual", deskripsi: "Jurusan Desain Komunikasi Visual atau DKV adalah bagian dari ilmu desain yang mempelajari tentang konsep komunikasi dan ungkapan kreatif, dengan memanfaatkan elemen visual untuk menyampaikan pesan dengan tujuan tertentu. Karena unsur pesan memiliki peran yang sangat penting, lulusan jurusan DKV diharapkan mampu mengeloah pesan tersebut menjadi sesuatu yang menarik, informatif, dan komunikatif, sehingga bisa disampaikan secara efektif." },
+      { nama: "Teknik Komputer dan Jaringan", deskripsi:"Menginstalasi Perangkat Jaringan : Internet Service Provider (ISP), Wireless Networking, Network Administrator, Administrasi Server, Linux Administrator, VOIP Integrator, Web Administrator." },
+      { nama: "Teknik Kendaraan Ringan", deskripsi: "Mekanik otomotif motor bensin, solar, diesel, dan sepeda motor. Operator industri otomotif dan wirausaha bengkel otomotif dan sepeda motor." },
+      { nama: "Desain Pemodelan dan Informasi Bangunan", deskripsi: "Desain Pemodelan dan Informasi Bangunan adalah jurusan yang mempelajari tentang perencanaan bangunan, pelaksanaan pembuatan gedung dan perbaikan gedung. Kegiatannya adalah belajar menggambar/Desain rumah, gedung dan apartemen, melaksankan pembangunan dan memelihara kontruksi bangunan." }
+    ];
+
+    let currentIndex = 0;
+    const container = document.getElementById("jurusanContainer");
+
+    function showSlide(index) {
+      const jurusan = jurusanData[index];
+      container.classList.remove("slide-active");
+      container.classList.add("slide-fade");
+
+      setTimeout(() => {
+        container.innerHTML = `
+          <h3 class="text-2xl font-bold mb-2">${jurusan.nama}</h3>
+          <p class="text-gray-700">${jurusan.deskripsi}</p>
+        `;
+        container.classList.remove("slide-fade");
+        container.classList.add("slide-active");
+      }, 100);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % jurusanData.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + jurusanData.length) % jurusanData.length;
+      showSlide(currentIndex);
+    }
+
+    function updateJam() {
+      const now = new Date();
+      const waktu = now.toLocaleString("id-ID", {
+        weekday: "long", year: "numeric", month: "long", day: "numeric",
+        hour: "2-digit", minute: "2-digit", second: "2-digit"
+      });
+      document.getElementById("jamDigital").textContent = waktu;
+    }
+
+    setInterval(updateJam, 1000);
+    updateJam();
+    showSlide(currentIndex);
+
+    // Toggle mobile nav
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
